@@ -1,0 +1,7 @@
+parameters:
+#    phprogress_user.example.class: Phprogress\UserBundle\Example
+
+services:
+#    phprogress_user.example:
+#        class: %phprogress_user.example.class%
+#        arguments: [@service_id, "plain_value", %parameter%]

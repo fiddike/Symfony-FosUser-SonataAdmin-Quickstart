@@ -1,0 +1,49 @@
+<h1>DemoClass</h1>
+
+<table class="record_properties">
+    <tbody>
+        <tr>
+            <th>Id</th>
+            <td>{{ entity.id }}</td>
+        </tr>
+        <tr>
+            <th>Demostring</th>
+            <td>{{ entity.demoString }}</td>
+        </tr>
+        <tr>
+            <th>Demotext</th>
+            <td>{{ entity.demoText }}</td>
+        </tr>
+        <tr>
+            <th>Demofloat</th>
+            <td>{{ entity.demoFloat }}</td>
+        </tr>
+        <tr>
+            <th>Demoemail</th>
+            <td>{{ entity.demoEmail }}</td>
+        </tr>
+        <tr>
+            <th>Demodate</th>
+            <td>{{ entity.demoDate|date('Y-m-d H:i:s') }}</td>
+        </tr>
+    </tbody>
+</table>
+
+<ul class="record_actions">
+    <li>
+        <a href="{{ path('formdemo_crud') }}">
+            Back to the list
+        </a>
+    </li>
+    <li>
+        <a href="{{ path('formdemo_crud_edit', { 'id': entity.id }) }}">
+            Edit
+        </a>
+    </li>
+    <li>
+        <form action="{{ path('formdemo_crud_delete', { 'id': entity.id }) }}" method="post">
+            {{ form_widget(delete_form) }}
+            <button type="submit">Delete</button>
+        </form>
+    </li>
+</ul>

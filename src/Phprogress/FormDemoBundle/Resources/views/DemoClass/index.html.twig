@@ -1,0 +1,45 @@
+<h1>DemoClass list</h1>
+
+<table class="records_list">
+    <thead>
+        <tr>
+            <th>Id</th>
+            <th>Demostring</th>
+            <th>Demotext</th>
+            <th>Demofloat</th>
+            <th>Demoemail</th>
+            <th>Demodate</th>
+            <th>Actions</th>
+        </tr>
+    </thead>
+    <tbody>
+    {% for entity in entities %}
+        <tr>
+            <td><a href="{{ path('formdemo_crud_show', { 'id': entity.id }) }}">{{ entity.id }}</a></td>
+            <td>{{ entity.demoString }}</td>
+            <td>{{ entity.demoText }}</td>
+            <td>{{ entity.demoFloat }}</td>
+            <td>{{ entity.demoEmail }}</td>
+            <td>{% if entity.demoDate %}{{ entity.demoDate|date('Y-m-d H:i:s') }}{% endif %}</td>
+            <td>
+                <ul>
+                    <li>
+                        <a href="{{ path('formdemo_crud_show', { 'id': entity.id }) }}">show</a>
+                    </li>
+                    <li>
+                        <a href="{{ path('formdemo_crud_edit', { 'id': entity.id }) }}">edit</a>
+                    </li>
+                </ul>
+            </td>
+        </tr>
+    {% endfor %}
+    </tbody>
+</table>
+
+<ul>
+    <li>
+        <a href="{{ path('formdemo_crud_new') }}">
+            Create a new entry
+        </a>
+    </li>
+</ul>
