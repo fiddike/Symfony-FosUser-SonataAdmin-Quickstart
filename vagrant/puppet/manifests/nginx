@@ -1,0 +1,21 @@
+server {
+    listen 80;
+
+    server_name _;
+    root /vagrant/web;
+
+    error_log /var/log/nginx/PHP-Schulung-Demos.error.log;
+    access_log /var/log/nginx/PHP-Schulung-Demos.access.log;
+
+    location  /  {
+        autoindex  on;
+    }
+
+    location ~ \.php(/|$) {
+        fastcgi_pass   127.0.0.1:9000;
+        fastcgi_split_path_info ^(.+\.php)(/.*)$;
+        include fastcgi_params;
+        fastcgi_param  SCRIPT_FILENAME    $document_root$fastcgi_script_name;
+        fastcgi_param  HTTPS              off;
+    }
+}
