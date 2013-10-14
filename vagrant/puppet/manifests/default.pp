@@ -68,6 +68,7 @@ package { [
     "php-pear",
     "php5-intl",
     "php5-mysql",
+    "php5-sqlite",
     "php5-xdebug",
 ]:
     ensure => installed,
