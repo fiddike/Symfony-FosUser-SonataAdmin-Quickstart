@@ -25,4 +25,19 @@ class DefaultController extends Controller
     {
         throw new NotFoundHttpException ('This Exception is thrown to simulate that some content has not been found.');
     }
+
+    /**
+     * @Route("/debug-me")
+     */
+    public function debugMeAction()
+    {
+        $i = 1;
+        $k = 2;
+        $i = 10;
+        $k = 20;
+        $p = 100;
+        $p = 200;
+
+        throw new NotFoundHttpException ('This Exception is thrown to simulate that some content has not been found.');
+    }
 }
