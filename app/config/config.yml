@@ -150,3 +150,6 @@ sonata_doctrine_orm_admin:
                 bigint:     SonataAdminBundle:CRUD:base_show_field.html.twig
                 integer:    SonataAdminBundle:CRUD:base_show_field.html.twig
                 decimal:    SonataAdminBundle:CRUD:base_show_field.html.twig
+services:
+    level9.uebung3:
+        class: Phprogress\FormDemoBundle\Multiplikator\Multiplikator
