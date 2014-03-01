@@ -4,3 +4,12 @@ https://github.com/timon-schroeter/PHP-Schulung-Demos/blob/master/README.md
 
 AND: Keep in mind that this machine's IP address is different to allow running both of them side by side. This machine runs on:
 http://192.168.24.100/
+
+Create the Database as follows:
+app/console doctrine:schema:create
+
+To use Sonata-Admin create yourself an admin user as follows:
+app/console fos:user:create quickstart_admin
+app/console fos:user:activate quickstart_admin
+app/console fos:user:promote quickstart_admin
+give the role: ROLE_ADMIN
