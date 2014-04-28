@@ -1,6 +1,6 @@
 [xdebug]
 xdebug.remote_enable=1
-xdebug.remote_autostart=0
+xdebug.remote_autostart=1
 xdebug.remote_connect_back=1
 ; turning off host setting b.c. this is overridden by remote_connect_back
 ; xdebug.remote_host=10.0.2.2
