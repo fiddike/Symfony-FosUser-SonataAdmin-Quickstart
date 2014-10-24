@@ -79,7 +79,7 @@ package { [
 # Configure xdebug
 file { "/etc/php5/conf.d/xdebug.ini":
     ensure => file,
-    source => "/tmp/vagrant-puppet/manifests/xdebug",
+    source => "/vagrant/vagrant/puppet/manifests/xdebug",
     require => [Package["php5-cli"], Package["php5-fpm"]],
     notify => Service["php5-fpm"],
 }
@@ -118,7 +118,7 @@ exec { "php-timezone-fpm":
 file { "/etc/nginx/sites-enabled/php-schulung-demos.conf":
     path => "/etc/nginx/sites-enabled/php-schulung-demos.conf",
     ensure => present,
-    source => "/tmp/vagrant-puppet/manifests/nginx",
+    source => "/vagrant/vagrant/puppet/manifests/nginx",
     notify => Service["nginx"],
     require => Package["nginx"],
 }
