@@ -61,6 +61,7 @@ class DefaultController extends Controller
         /** @var Multiplikator $multiplikator */
         $multiplikator = $this->get('level9.uebung3');
         $product = $multiplikator->multiply($number1, $number2, $number3);
+
         return array ('product' => $product);
     }
 }
