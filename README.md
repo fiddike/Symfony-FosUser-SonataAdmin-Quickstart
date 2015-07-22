@@ -3,7 +3,7 @@ The Vagrant configuration of this Symfony based demo app ist very similar to the
 https://github.com/timon-schroeter/PHP-Schulung-Demos/blob/master/README.md
 
 AND: Keep in mind that this machine's IP address is different to allow running both of them side by side. This machine runs on:
-http://192.168.24.100/
+http://192.168.24.104/
 
 Create the Database as follows:
 app/console doctrine:schema:create
