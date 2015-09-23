@@ -1,0 +1,23 @@
+parameters:
+    database_driver:   pdo_mysql
+    database_host:     localhost
+    database_port:     ~
+    database_name:     quickstart
+    database_user:     root
+    database_password: ~
+
+    mailer_transport:  smtp
+    mailer_host:       smtp.marketvalid.com
+    mailer_port:       465
+    mailer_user:       smtp@marketvalid.com
+    mailer_password:   AddYourOwnSmtpServer
+    mailer_encryption: ssl
+    mailer_auth:       ~
+
+    locale:            en
+    secret:            ThisTokenIsNotSoSecretChangeIt
+
+    # required by the liip functional-test-bunle
+    session.storage.options:
+        name:            TestName123
+        cookie_lifetime: 1209600
