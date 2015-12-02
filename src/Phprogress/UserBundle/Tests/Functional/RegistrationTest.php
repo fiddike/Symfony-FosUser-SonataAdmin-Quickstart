@@ -17,12 +17,9 @@ class RegistrationTest extends WebTestCase
             'fos_user_registration_form[username]' => 'testUser',
             'fos_user_registration_form[email]' => 'testEmail@testDomain.com',
             'fos_user_registration_form[plainPassword][first]' => 'testPass',
-            'fos_user_registration_form[plainPassword][second]' => 'testPasSs',
+            'fos_user_registration_form[plainPassword][second]' => 'testPass',
         ));
         $crawler = $client->submit($form);
-
-        var_dump($client->getResponse()->getContent());
-
         $crawler = $client->followRedirect();
         $this->assertTrue($crawler->filter('html:contains("The user has been created successfully")')->count() > 0);
     }
